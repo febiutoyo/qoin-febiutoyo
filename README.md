@@ -2,12 +2,12 @@
 
 This repository contains automated testing projects for Qoin technical test, consisting of two main tasks:
 
-## Task 1: UI Automation Testing with Katalon Studio
+## Task 1: API Automation Testing with Katalon Studio
 
-The first task contains UI automation tests implemented using Katalon Studio. The project structure includes:
+The first task contains API automation tests implemented using Katalon Studio. The project structure includes:
 
 - `/Test Cases`: Contains all test case implementations
-- `/Object Repository`: Stores UI element mappings and object definitions
+- `/Object Repository`: Stores API element mappings and object definitions
 - `/Scripts`: Contains test scripts
 - `/Keywords`: Custom keywords and reusable functions
 - `/Test Suites`: Test suite configurations
