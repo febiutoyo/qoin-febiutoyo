@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test Suite,,,,2025-08-27 22:52:08,2025-08-27 22:52:16,7.477s,PASSED
+,,,,,,,
+Test Cases/Testcase,,,,2025-08-27 22:52:09,2025-08-27 22:52:16,7.019s,PASSED
+parser = new groovy.json.JsonSlurper(),,,,2025-08-27 22:52:09,2025-08-27 22:52:10,0.009s,PASSED
+"responseListUser = sendRequest(findTestObject(""Object Repository/OR01-RequestListUser""), STOP_ON_FAILURE)",,,,2025-08-27 22:52:10,2025-08-27 22:52:14,4.139s,PASSED
+"verifyResponseStatusCode(responseListUser, 200)",,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.022s,PASSED
+parserResponseListUser = parser.parseText(responseListUser.getResponseBodyContent()),,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.045s,PASSED
+"responseSingleUser = sendRequest(findTestObject(""Object Repository/OR02-RequestSingleUser""))",,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.391s,PASSED
+"verifyResponseStatusCode(responseSingleUser, 200)",,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.006s,PASSED
+parserResponseSingleUser = parser.parseText(responseSingleUser.getResponseBodyContent()),,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.002s,PASSED
+"name = ""Febiutoyo""",,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.001s,PASSED
+"job = ""Principal Software Engineer""",,,,2025-08-27 22:52:14,2025-08-27 22:52:14,0.001s,PASSED
+"responseUpdate = sendRequest(findTestObject(""OR03-Update"", [""name"":name, ""job"":job]))",,,,2025-08-27 22:52:14,2025-08-27 22:52:15,0.922s,PASSED
+"verifyResponseStatusCode(responseUpdate, 200)",,,,2025-08-27 22:52:15,2025-08-27 22:52:15,0.006s,PASSED
+parserResponseUpdate = parser.parseText(responseUpdate.getResponseBodyContent()),,,,2025-08-27 22:52:15,2025-08-27 22:52:15,0.002s,PASSED
+"verifyMatch(name, name, false)",,,,2025-08-27 22:52:15,2025-08-27 22:52:15,0.080s,PASSED
+"verifyMatch(job, job, false)",,,,2025-08-27 22:52:15,2025-08-27 22:52:15,0.008s,PASSED
+email = email,,,,2025-08-27 22:52:15,2025-08-27 22:52:15,0.001s,PASSED
+"responseRegisterSuccessful = sendRequest(findTestObject(""Object Repository/OR04-RequestRegisterSuccess"", [""email"":email]))",,,,2025-08-27 22:52:15,2025-08-27 22:52:16,0.757s,PASSED
+"verifyResponseStatusCode(responseRegisterSuccessful, 200)",,,,2025-08-27 22:52:16,2025-08-27 22:52:16,0.004s,PASSED
+parserResponseRegisterSuccessful = parser.parseText(responseRegisterSuccessful.getResponseBodyContent()),,,,2025-08-27 22:52:16,2025-08-27 22:52:16,0.001s,PASSED
+"verifyNotEqual(token, null)",,,,2025-08-27 22:52:16,2025-08-27 22:52:16,0.019s,PASSED

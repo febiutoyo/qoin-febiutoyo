@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test Suite" time="7.477" tests="1" failures="0" errors="0">
+   <testsuite name="Test Suite" tests="1" failures="0" errors="0" time="7.477" skipped="0" timestamp="2025-08-27 22:52:08" hostname="Febiutoyo - LAPTOP-TS7GBC4L" id="Test Suites/Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\Febiutoyo\\Katalon Studio\\Technical Test  Qoin\\Reports\\20250827_225156\\Test Suite\\20250827_225156"/>
+         <property name="logFiles" value="C:\\Users\\Febiutoyo\\Katalon Studio\\Technical Test  Qoin\\Reports\\20250827_225156\\Test Suite\\20250827_225156\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Febiutoyo - LAPTOP-TS7GBC4L"/>
+         <property name="hostAddress" value="192.168.1.115"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.6.10.208"/>
+      </properties>
+      <testcase name="Test Cases/Testcase" time="7.019" classname="Test Cases/Testcase" status="PASSED">
+         <system-out><![CDATA[2025-08-27 22:52:09 - [TEST_CASE][PASSED] - Test Cases/Testcase: Test Cases/Testcase
+
+2025-08-27 22:52:09 - [TEST_STEP][PASSED] - parser = new groovy.json.JsonSlurper(): null
+
+2025-08-27 22:52:10 - [TEST_STEP][PASSED] - responseListUser = sendRequest(findTestObject("Object Repository/OR01-RequestListUser"), STOP_ON_FAILURE): Send request successfully
+
+2025-08-27 22:52:14 - [MESSAGE][INFO] - HAR: C:\Users\Febiutoyo\Katalon Studio\Technical Test  Qoin\Reports\20250827_225156\Test Suite\20250827_225156\requests\main\0.har
+
+2025-08-27 22:52:14 - [MESSAGE][PASSED] - Send request successfully
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseListUser, 200): Verify response status code successfully
+
+2025-08-27 22:52:14 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - parserResponseListUser = parser.parseText(responseListUser.getResponseBodyContent()): null
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - responseSingleUser = sendRequest(findTestObject("Object Repository/OR02-RequestSingleUser")): Send request successfully
+
+2025-08-27 22:52:14 - [MESSAGE][INFO] - HAR: C:\Users\Febiutoyo\Katalon Studio\Technical Test  Qoin\Reports\20250827_225156\Test Suite\20250827_225156\requests\main\1.har
+
+2025-08-27 22:52:14 - [MESSAGE][PASSED] - Send request successfully
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseSingleUser, 200): Verify response status code successfully
+
+2025-08-27 22:52:14 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - parserResponseSingleUser = parser.parseText(responseSingleUser.getResponseBodyContent()): null
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - name = "Febiutoyo": null
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - job = "Principal Software Engineer": null
+
+2025-08-27 22:52:14 - [TEST_STEP][PASSED] - responseUpdate = sendRequest(findTestObject("OR03-Update", ["name":name, "job":job])): Send request successfully
+
+2025-08-27 22:52:15 - [MESSAGE][INFO] - HAR: C:\Users\Febiutoyo\Katalon Studio\Technical Test  Qoin\Reports\20250827_225156\Test Suite\20250827_225156\requests\main\2.har
+
+2025-08-27 22:52:15 - [MESSAGE][PASSED] - Send request successfully
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseUpdate, 200): Verify response status code successfully
+
+2025-08-27 22:52:15 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - parserResponseUpdate = parser.parseText(responseUpdate.getResponseBodyContent()): null
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - verifyMatch(name, name, false): Actual text 'Febiutoyo' and expected text 'Febiutoyo' are matched 
+
+2025-08-27 22:52:15 - [MESSAGE][PASSED] - Actual text 'Febiutoyo' and expected text 'Febiutoyo' are matched 
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - verifyMatch(job, job, false): Actual text 'Principal Software Engineer' and expected text 'Principal Software Engineer' are matched 
+
+2025-08-27 22:52:15 - [MESSAGE][PASSED] - Actual text 'Principal Software Engineer' and expected text 'Principal Software Engineer' are matched 
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - email = email: null
+
+2025-08-27 22:52:15 - [TEST_STEP][PASSED] - responseRegisterSuccessful = sendRequest(findTestObject("Object Repository/OR04-RequestRegisterSuccess", ["email":email])): Send request successfully
+
+2025-08-27 22:52:16 - [MESSAGE][INFO] - HAR: C:\Users\Febiutoyo\Katalon Studio\Technical Test  Qoin\Reports\20250827_225156\Test Suite\20250827_225156\requests\main\3.har
+
+2025-08-27 22:52:16 - [MESSAGE][PASSED] - Send request successfully
+
+2025-08-27 22:52:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseRegisterSuccessful, 200): Verify response status code successfully
+
+2025-08-27 22:52:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-08-27 22:52:16 - [TEST_STEP][PASSED] - parserResponseRegisterSuccessful = parser.parseText(responseRegisterSuccessful.getResponseBodyContent()): null
+
+2025-08-27 22:52:16 - [TEST_STEP][PASSED] - verifyNotEqual(token, null): Actual object 'QpwL5tke4Pnpja7X1' and expected object 'null' are not equal
+
+2025-08-27 22:52:16 - [MESSAGE][PASSED] - Actual object 'QpwL5tke4Pnpja7X1' and expected object 'null' are not equal]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2025-08-27 22:52:08 - [TEST_SUITE][PASSED] - Test Suite: Test Cases/Testcase]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
